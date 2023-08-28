@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            align-items: center;
+
+        }
+        #id-container{
+            display: flex;
+            justify-content: center;
+        }
+        img{
+            margin: 0 100px 0 0;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>ทอยลูกเต๋า</h1>
+    <div class="dice" id = "id-container">
+    <img class="img" id ="img1" src="1.PNG">
+    <img class="img" id ="img2" src="1.PNG">
+    <img class="img" id ="img3" src="1.PNG">
+        
+</div>
+ 
+<br>
+<div>
+    <button onclick="btn()">ทอย</button>
+</div>
+    <script>
+        let dice = document.getElementsByClassName('img');
+        function btn(){
+            for(let i=0;i<dice.length;i++){
+                let ran = (Math.random()*6)+1;
+
+                dice[i].src = parseInt(ran) +'.png';
+                console.log(parseInt(ran) + '.png');
+            }
+        }
+    </script>
+</body>
+</html>
